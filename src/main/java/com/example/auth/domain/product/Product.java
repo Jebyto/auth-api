@@ -6,8 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.math.BigInteger;
-
 @Table(name = "product")
 @Entity(name = "product")
 @Getter
@@ -23,7 +21,7 @@ public class Product {
 
     private Integer price;
 
-    public Product(ProductRequestDTO data){
+    public Product(ProductRequestDTO data) {
         this.price = data.price();
         this.name = data.name();
     }
